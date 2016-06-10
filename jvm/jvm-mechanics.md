@@ -85,3 +85,19 @@ void loopUntilFlagSet(Object a) {
 }
 //That’s what volatile is for...
 ```
+- Writes can be eliminated, intermediate values might never be visible
+```java
+    void updateDistance(Object a) {
+        a. setVisibleValue(0);
+        for (int i = 0; i < 1000000; i++) {
+            a.setInternalValue(i);
+    }
+        a.setVisibleValue(a.getInternalValue());
+    }
+
+//Is the same as
+    void updateDistance(Object a) {
+        a.setInternalValue(1000000);
+        a.setVisibleValue(1000000);
+    }
+```
