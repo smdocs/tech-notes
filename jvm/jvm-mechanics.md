@@ -1,7 +1,7 @@
 #JVM Mechanics
 
 1. Compiler 
-2. Adaptive Behavious
+2. Adaptive Behaviour
 3. Ordering 
 4. Garbage Collection
 
@@ -101,3 +101,21 @@ void loopUntilFlagSet(Object a) {
         a.setVisibleValue(1000000);
     }
 ```
+ JIT Compiler can also do the following
+ 1. Class Hierarchy analysis
+    - Can perform global analysis on currently loaded code
+    - Deduce stuff about inheritance, method overrides, etc.
+    - Can make optimization decisions based on assumptions
+    - Re-evaluate assumptions when loading new classes
+    - Throw away code that conflicts with assumptions before class loading makes them invalid
+
+ 2. Inlining as long as there is one implementer of get(X)
+ 3. Speculative optimization
+    - Being able throw away wrong code is very useful
+    - Speculatively assuming callee type
+    - polymorphic can be “monomorphic” or “megamorphic”
+    - Can make virtual calls static even without CHA
+    - Can speculatively inline things without CHA
+    - Speculatively assuming branch behavior
+ 4. Adaptative compilation
+ 5. 
