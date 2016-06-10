@@ -11,10 +11,10 @@
 - JIT Compilers transform code, the code that gets executed can be very different from the code that was written.
 ```java
   int doMath(int x, int y, int z) {
-  int a = x + y;
-  int b = x - y;
-  int c = z + x;
-  return a + b;
+    int a = x + y;
+    int b = x - y;
+    int c = z + x;
+    return a + b;
 }
 //Can be reordered to:
   int doMath(int x, int y, int z) {
@@ -54,5 +54,20 @@
 //or simplified
   int doMath(int x, int y, int z) {
     return x + x;
+}
+```
+- Reads can be cached.
+```java
+  int distanceRatio(Object a) {
+    int distanceTo = a.getX() - start;
+    int distanceAfter = end - a.getX();
+    return distanceTo/distanceAfter;
+}
+//Is the same as
+  int distanceRatio(Object a) {
+    int x = a.getX();
+    int distanceTo = x - start;
+    int distanceAfter = end - x;
+    return distanceTo/distanceAfter;
 }
 ```
