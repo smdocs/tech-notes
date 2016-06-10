@@ -70,4 +70,18 @@
     int distanceAfter = end - x;
     return distanceTo/distanceAfter;
 }
+//another example
+  void loopUntilFlagSet(Object a) {
+    while (!a.flagIsSet()) {
+    loopcount++;
+}
+
+Is the same as:
+void loopUntilFlagSet(Object a) {
+  boolean flagIsSet = a.flagIsSet();
+  while (!flagIsSet) {
+    loopcount++;
+  }
+}
+//That’s what volatile is for...
 ```
