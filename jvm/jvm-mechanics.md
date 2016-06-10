@@ -39,3 +39,16 @@
   return a + b;
 }
 ```
+- Values can be reduced
+```java
+  int doMath(int x, int y, int z) {
+  int a = x + y;
+  int b = x - y;
+  int c = z + x;
+  return a + b;
+}
+//Can be reduced to:
+  int doMath(int x, int y, int z) {
+  return x + y + x - y;
+}
+```
