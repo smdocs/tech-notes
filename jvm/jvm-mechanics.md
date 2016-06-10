@@ -118,4 +118,7 @@ void loopUntilFlagSet(Object a) {
     - Can speculatively inline things without CHA
     - Speculatively assuming branch behavior
  4. Adaptative compilation
+    - Reduces need to trade off clean design against speed
+        - E.g. “final” should be used on methods only when you want to prohibit extension, overriding. Has no effect on speed.
+        - E.g. branching can be written “naturally”
  5. 
