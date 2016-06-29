@@ -17,7 +17,7 @@ Based on all this, what you will find below is a suggested collection of alerts.
 
 Metric | Comments | Suggested Alert
 -------|----------|----------------
-mysqld process count | Right binary daemon process running. | When process count /usr/sbin/mysqld != 1
+process count | Right binary daemon process running. | When process count /usr/sbin/server-process-id != 1
 
 ### System Metrics 
 
