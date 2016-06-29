@@ -42,7 +42,6 @@ Average IO wait | Time that queue operations have to wait for disk access. | Non
 Average Read/Write time | Time it takes to finish disk access operations (latency). | None
 Read/Write bandwidth | Data transfer from and towards your disk. | None
 
-![Example of a MySQL metrics dashboard](https://serverdensity-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/mysql_dashboard.png)
 
 ###  Metrics
 
