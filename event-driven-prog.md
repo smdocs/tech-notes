@@ -28,7 +28,7 @@ situations. In my experience, there are three cases in which to use events:
 - To perform async tasks
 - To keep track of state changes (audit log)
 
-1. To decouple components
+### 1. To decouple components
 
 When component A performs the logic that needs to trigger the component B logic, instead of calling it directly, we can trigger an event
 sending into an event dispatcher. Component B will be listening to that specific event in the dispatcher and will act whenever the event
