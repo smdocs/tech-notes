@@ -51,3 +51,5 @@ Shared Kernel
 >> Designate with an explicit boundary some subset of the domain model that the teams agree to share. Keep this kernel small. This 
 explicitly shared stuff has special status, and shouldn’t be changed without consultation with the other team.
 Eric Evans 2014, Domain-Driven Design Reference
+
+[](https://herbertograca.com/2017/10/05/event-driven-architecture/#more-10802)
