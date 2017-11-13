@@ -31,3 +31,12 @@ means, but they may be a useful set of prompts for issues to consider.
   - What are the capacity needs? How does the system grow?
   - How do you configure the system? How do you configure the system quickly?
   - Does the system behave in a predictable manner? Where are there nonlinearities in load or failure responses?
+
+### Efficiency
+  - Is it possible to precompute data?
+  - Are you doing as little work as possible?
+  - Is the program as concurrent as possible? (Concurrent programs wait faster.)
+  - Does the system make use of work batching?
+  - Have you profiled the system? Is it possible to profile in situ?
+  - Are there opportunities for parallelization?
+  - Can you load test the system? How do you catch performance regressions?
