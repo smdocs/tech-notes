@@ -40,3 +40,8 @@ means, but they may be a useful set of prompts for issues to consider.
   - Have you profiled the system? Is it possible to profile in situ?
   - Are there opportunities for parallelization?
   - Can you load test the system? How do you catch performance regressions?
+
+### Caching
+  - What's your invalidation policy?
+  - Do you know where your writes are?
+  - What cache-hit rate does your system require to stay up?
