@@ -1,0 +1,10 @@
+# Cassandra Data Modelling - Best Practices
+
+### KeySpace Review
+
+1. Is the replication factor set to atleast 3? (Quorum)
+Replication factor of at least 3 is required for data protection and high availability.
+
+2. 
+
+[Data Modelling Recommended Practices](https://www.instaclustr.com/support/documentation/cluster-management/data-modelling-recommended-practices/)
