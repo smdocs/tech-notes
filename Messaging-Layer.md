@@ -1,4 +1,4 @@
-# Requirements for TMI (Messaging API)
+# Requirements for TMI (Message Bus)
 
 ### Overview
 Within Trading Systems various independent ticketing, trading  and order management client applications needs to communicate with TMS in a unified manner. We need an integration /service architecture that enables those applications to coordinate in a loosely coupled fashioned but also use channels that provide different messaging paradigms.
