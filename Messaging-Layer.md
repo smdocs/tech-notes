@@ -48,6 +48,26 @@ Underlying, TMI can expose functionality of the following components:
 
 3. Support for multiple language implementation
 
+4. Message Filtering
+
+Message filtering criteria
+  - A subscription filter policy either matches an incoming message, or it doesn’t. It’s Boolean logic.
+  - For a filter policy to match a message, the message must contain all the attribute keys listed in the policy.
+  
+    - Attributes of the message not mentioned in the filtering policy are ignored.
+    - The value of each key in the filter policy is an array containing one or more values. The policy matches if any of the values in the array match the value in the corresponding message attribute.
+    - If the value in the message attribute is an array, then the filter policy matches if the intersection of the policy array and the message array is non-empty.
+    - The matching is exact (character-by-character), without case-folding or any other string normalization.
+    - The values being matched follow JSON rules: Strings enclosed in quotes, numbers, and the unquoted keywords true, false, and null.
+    - Number matching is at the string representation level. Example: 300, 300.0, and 3.0e2 aren’t considered equal.
+
+Usage of message filtering is recommended into a single topic only when all of the following is true:
+    1. Subscribers are semantically related to each other
+    2. Subscribers consume similar types of events
+    3. Subscribers are supposed to share the same access permissions on the topic
+
+
 
 [1](https://msdn.microsoft.com/en-us/library/aa480027.aspx)
 [2](http://bulldog2011.github.io/blog/2013/01/23/big-queue-design/)
+[3](https://aws.amazon.com/blogs/compute/simplify-pubsub-messaging-with-amazon-sns-message-filtering/)
