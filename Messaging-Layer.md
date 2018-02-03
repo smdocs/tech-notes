@@ -40,7 +40,13 @@ Underlying, TMI can expose functionality of the following components:
 
 5. <b>Management and Monitoring</b> : Server management and JMX based monitoring interface.
 
-### 
+### Design Consideration
+
+1. Types of Channels
+
+2. Domain interfaces
+
+3. Support for multiple language implementation
 
 
 [1](https://msdn.microsoft.com/en-us/library/aa480027.aspx)
