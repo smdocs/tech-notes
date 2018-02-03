@@ -32,7 +32,7 @@ Underlying, TMI can expose functionality of the following components:
 
 1. <b>Persistent Queue</b> : Physical implementation of logic topic, internally use memory mapped file, automatic paging and swapping algorithm, sliding window, index based access for fast queue operation while use memory in an efficient way.
 
-2. <b>Thrift based Interface</b> : Simple RPC based API exposing queue service to external clients, exposing rich message level objects generated from the underlying data model.
+2. <b>Thrift based Interface</b> : Simple RPC based API exposing queue service to external clients, exposing rich message level objects generated from the underlying TMS domain model.
 
 3. <b>Producer Client</b> : Wrapper around underlying producing API, in order to provide simplified and uniform interface for developers, also provides advanced partitioning, batching, compression and asynchronous producing features.
 
