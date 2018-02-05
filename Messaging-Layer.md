@@ -1,7 +1,7 @@
 # Requirements for TMI (Message Bus)
 
 ### Contents
-* [Overview] (#over)
+* [Overview](#over)
 * [Objectives](#obj)
 * [Design Considerations](#des)
 * [Features](#features)
