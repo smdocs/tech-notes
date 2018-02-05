@@ -6,7 +6,7 @@
 * [Design Considerations](#des)
 * [Features](#features)
 
-###  Overview #over
+###  Overview 
 Within Trading Systems various independent ticketing, trading  and order management client applications needs to communicate with TMS in a unified manner. We need an integration /service architecture that enables those applications to coordinate in a loosely coupled fashioned and provide channels in order to support different messaging paradigms.
 
 TMI can act as message bus, which  is a combination of a common data model, a common command set, and a messaging infrastructure to allow different heterogeneous systems to communicate through a shared set of interfaces.
