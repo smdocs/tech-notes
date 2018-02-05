@@ -52,12 +52,11 @@ Main design objectives of TMI messaging interface:
 
 1. Types of Channels - the following types of communication channels should be supported in order to provide several messaging paradigms
       - Pub-Sub Channel
-      - Request-Reply Channel
-      - Data Streams Channel
+      - Request-Reply Channel - notification or acknowledgement arrives on a different channel, asynchronously
+      - Data Streams Channel - 
       - Data Channel
       - Error Channel
-  
-  
+      - Synchronous Request/Reply Channel (can be provided by underlying Bass call)
 
 2. Domain interfaces
 
