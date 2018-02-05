@@ -77,9 +77,9 @@ Main design objectives of TMI messaging interface:
 - Number matching is at the string representation level. Example: 300, 300.0, and 3.0e2 aren’t considered equal.
 
 Usage of message filtering is recommended into a single topic only when all of the following is true:
-    1. Subscribers are semantically related to each other
-    2. Subscribers consume similar types of events
-    3. Subscribers are supposed to share the same access permissions on the topic
+1. Subscribers are semantically related to each other
+2. Subscribers consume similar types of events
+3. Subscribers are supposed to share the same access permissions on the topic
 
 
 
