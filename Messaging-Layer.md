@@ -36,6 +36,8 @@ Main design objectives of TMI messaging interface:
 
 - <b>Common Data Model</b> : usage of the underlying data model in order to communicate with various TMS domains
 
+- <b>Technology Abstraction<b>: provide abstraction layer on top of the underlying technology implementation
+
 **Underlying, TMI can expose functionality of the following components:**
 
 1. <b>Persistent Queue</b> : Physical implementation of logic topic, internally use memory mapped file, automatic paging and swapping algorithm, sliding window, index based access for fast queue operation while use memory in an efficient way.
