@@ -20,7 +20,7 @@ Main design objectives of TMI messaging interface:
 
 - <b>Distributed</b>: TMIshould explicitly support partitioning messages and distributing consumption over a cluster of consumer machines while maintaining per-partition ordering semantics.
 
-- <b>Multiple Client Support</b> : TMI should support easy integration of clients from different kinds of platforms(such as Java, .Net, PHP, Ruby, Python, etc), it’s desirable that producers and consumers can be auto-generated from Luxun service interface, by leveraging technology like Thrift RPC.
+- <b>Multiple Client Support</b> : TMI should support easy integration of clients from different kinds of platforms(such as C++,Java, Python, etc), it’s desirable that producers and consumers can be auto-generated from TMI service interface, by leveraging technology like Thrift RPC.
 
 - <b>Flexible consuming semantics</b>: TMI should support typical consume once queue, fanout queue, and provides more flexible consuming mechanism like consuming by index.
 
@@ -36,7 +36,7 @@ Underlying, TMI can expose functionality of the following components:
 
 3. <b>Producer Client</b> : Wrapper around underlying producing API, in order to provide simplified and uniform interface for developers, also provides advanced partitioning, batching, compression and asynchronous producing features.
 
-4. <b>Consumer Client</b> : Wrapper around Luxun consuming API, provides simplified and stream style consuming interface for developers, supporting advanced distributed consuming, multi-threads concurrent consuming, group consuming features.
+4. <b>Consumer Client</b> : TMI consuming API, should provide simplified and stream style consuming interface for developers, supporting advanced distributed consuming, multi-threads concurrent consuming, group consuming features.
 
 5. <b>Management and Monitoring</b> : Server management and JMX based monitoring interface.
 
