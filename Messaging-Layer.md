@@ -83,6 +83,13 @@ Usage of message filtering is recommended into a single topic only when all of t
 2. Subscribers consume similar types of events
 3. Subscribers are supposed to share the same access permissions on the topic
 
+---
+### Technology Stack
+1. Apache Thrift
+2. RabbitMq
+3. Apache Kafka to provide streaming services
+4. BB Bass for synchronous request/reply (REST and Native BASS SOAP)
+
 
 
 [1](https://msdn.microsoft.com/en-us/library/aa480027.aspx)
