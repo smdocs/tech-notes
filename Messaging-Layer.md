@@ -48,6 +48,8 @@ Main design objectives of TMI messaging interface:
 
 ### Design Consideration
 
+![](pics/tmi-features.jpg)
+
 1. Types of Channels
 
 2. Domain interfaces
