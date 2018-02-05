@@ -50,7 +50,13 @@ Main design objectives of TMI messaging interface:
 
 ![](pics/tmi-features.jpg)
 
-1. Types of Channels
+1. Types of Channels - the following types of communication channels should be supported in order to provide several messaging paradigms
+  - Pub-Sub Channel
+  - Request-Reply Channel
+  - Data Channel
+  - Error Channel
+  
+  
 
 2. Domain interfaces
 
