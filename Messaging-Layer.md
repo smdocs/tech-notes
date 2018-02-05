@@ -13,6 +13,8 @@ TMI can act as message bus, which  is a combination of a common data model, a co
 
 A message bus can be considered as a universal connector between the various enterprise systems, and as a universal interface for client applications that wish to communicate with TMS and with each other. A message bus requires that all of the applications should use the TMS messaging model. TS applications adding messages to the bus may need to depend on message routers to route the messages to the appropriate final destinations. 
 
+---
+
 ### Objectives
 Main design objectives of TMI messaging interface:
 
@@ -46,11 +48,14 @@ Main design objectives of TMI messaging interface:
 
 5. <b>Management and Monitoring</b> : Server management and JMX based monitoring interface.
 
+---
+
 ### Design Consideration
 
 ![](pics/tmi-features.jpg)
 
-1. Types of Channels - the following types of communication channels should be supported in order to provide several messaging paradigms
+
+<b>1. Types of Channels</b> - the following types of communication channels should be supported in order to provide several messaging paradigms
       - Pub-Sub Channel
       - Request-Reply Channel - notification or acknowledgement arrives on a different channel, asynchronously
       - Data Streams Channel - once a channel is established between two endpoints, data gets pushed through the pipe. No throttling. The consumer may need to implement filtering and throttling in this case.
@@ -58,22 +63,19 @@ Main design objectives of TMI messaging interface:
       - Error Channel - Will be used to notify publishers and consumers of any errors
       - Synchronous Request/Reply Channel (can be provided by underlying Bass call)
 
-2. Domain interfaces - TMI will provide domain specific interfaces, based on the underlying message model
+<b>2. Domain interfaces</b> - TMI will provide domain specific interfaces, based on the underlying message model
 
-3. Support for multiple language implementation
+<b>3. Support for multiple language implementation</b>
 
-4. Message Filtering
+<b>4. Message Filtering</b> the following message filtering criteria should be provided
 
-Message filtering criteria
-  - A subscription filter policy either matches an incoming message, or it doesn’t. It’s Boolean logic.
-  - For a filter policy to match a message, the message must contain all the attribute keys listed in the policy.
-  
-    - Attributes of the message not mentioned in the filtering policy are ignored.
-    - The value of each key in the filter policy is an array containing one or more values. The policy matches if any of the values in the array match the value in the corresponding message attribute.
-    - If the value in the message attribute is an array, then the filter policy matches if the intersection of the policy array and the message array is non-empty.
-    - The matching is exact (character-by-character), without case-folding or any other string normalization.
-    - The values being matched follow JSON rules: Strings enclosed in quotes, numbers, and the unquoted keywords true, false, and null.
-    - Number matching is at the string representation level. Example: 300, 300.0, and 3.0e2 aren’t considered equal.
+      - A subscription filter policy either matches an incoming message, or it doesn’t. It’s Boolean logic.
+      - For a filter policy to match a message, the message must contain all the attribute keys listed in the policy. Attributes of the message not mentioned in the filtering policy should be ignored.
+      - The value of each key in the filter policy is an array containing one or more values. The policy matches if any of the values in the array match the value in the corresponding message attribute.
+      - If the value in the message attribute is an array, then the filter policy matches if the intersection of the policy array and the message array is non-empty.
+      - The matching is exact (character-by-character), without case-folding or any other string normalization.
+      - The values being matched should follow JSON type rules: Strings enclosed in quotes, numbers, and the unquoted keywords true, false, and null.
+      - Number matching is at the string representation level. Example: 300, 300.0, and 3.0e2 aren’t considered equal.
 
 Usage of message filtering is recommended into a single topic only when all of the following is true:
     1. Subscribers are semantically related to each other
