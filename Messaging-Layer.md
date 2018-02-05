@@ -5,6 +5,7 @@
 * [Objectives](#obj)
 * [Design Considerations](#des)
 * [Features](#features)
+* [Technology Stack](#techstack)
 
 ###  Overview 
 Within Trading Systems various independent ticketing, trading  and order management client applications needs to communicate with TMS in a unified manner. We need an integration /service architecture that enables those applications to coordinate in a loosely coupled fashioned and provide channels in order to support different messaging paradigms.
