@@ -53,12 +53,12 @@ Main design objectives of TMI messaging interface:
 1. Types of Channels - the following types of communication channels should be supported in order to provide several messaging paradigms
       - Pub-Sub Channel
       - Request-Reply Channel - notification or acknowledgement arrives on a different channel, asynchronously
-      - Data Streams Channel - 
-      - Data Channel
-      - Error Channel
+      - Data Streams Channel - once a channel is established between two endpoints, data gets pushed through the pipe. No throttling. The consumer may need to implement filtering and throttling in this case.
+      - Data Channel - The receiver must know what type of messages/events it is receiving hence it will subscribe/listen to domain outbound channel for domain specific messages
+      - Error Channel - Will be used to notify publishers and consumers of any errors
       - Synchronous Request/Reply Channel (can be provided by underlying Bass call)
 
-2. Domain interfaces
+2. Domain interfaces - TMI will provide domain specific interfaces, based on the underlying message model
 
 3. Support for multiple language implementation
 
