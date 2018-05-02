@@ -1,4 +1,4 @@
-#JVM Mechanics
+# JVM Mechanics
 
 1. Compiler 
 2. Adaptive Behaviour
