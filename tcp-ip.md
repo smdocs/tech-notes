@@ -6,3 +6,4 @@
 2. [Three-way Handshake](http://aurumme.com/atech/wp-content/uploads/2018/05/03.-TCP-3WHS-CheatSheet-gr-ATech-Waqas-Karim-.pdf)
 3. [TCP-IP Tuning](https://tools.ietf.org/html/draft-stenberg-httpbis-tcp-03#section-1.1)
 4. [High Performance Browser Networking](https://hpbn.co/building-blocks-of-tcp/)
+5. [Advanced Linux Programming](http://haifux.org/programming.html)
