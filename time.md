@@ -1,4 +1,4 @@
-#Notes on Time
+# Notes on Time
 
 
 UTC: The time at zero degrees longitude (the Prime Meridian) is called Coordinated Universal Time (UTC is a compromise between the French and English initialisms)
