@@ -40,11 +40,12 @@ Product and technical requirements that will be disregarded
  Conditions and resources that need to be present and accessible for the solution to work as described. 
  
 ### Solutions
-a. Current or Existing Solution / Design
+
+1. <b> Current or Existing Solution / Design </b>
     - Current solution description
     - Pros and cons of the current solution
 
-b. Suggested or Proposed Solution / Design 
+2. <b>Suggested or Proposed Solution / Design </b>
     - External components that the solution will interact with and that it will alter
     - Dependencies of the current solution
     - Pros and cons of the proposed  solution 
