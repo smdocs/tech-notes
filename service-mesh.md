@@ -31,4 +31,15 @@ E.g. Netflix OSS, Prana, Synapse and Nerve
 
 
 We  have recently seen a new wave of proxies that are flexible enough to adapt to different infrastructure components and preferences. The first widely known system on this space was Linkerd, created by Buoyant based on their engineers’ prior work on Twitter’s microservices platform. Soon enough, the engineering team at Lyft announced Envoy which follows a similar principle.
+
 ![](https://philcalcado.com/img/service-mesh/6-a.png)
+
+Probably the most powerful aspect of his definition is that it moves away from thinking of proxies as isolated components and acknowledges the network they form as something valuable in itself.
+
+Finally, a service mesh, works exactlt as proxies that manage 
+
+![](https://philcalcado.com/img/service-mesh/6-b.png)
+
+A bird's eye view of ServiceMesh
+![](https://philcalcado.com/img/service-mesh/mesh3.png)
+
