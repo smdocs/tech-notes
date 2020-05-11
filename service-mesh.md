@@ -1,5 +1,7 @@
 # Service Mesh
 
+> A service mesh is a dedicated infrastructure layer for handling service-to-service communication. It’s responsible for the reliable delivery of requests through the complex topology of services that comprise a modern, cloud native application. In practice, the service mesh is typically implemented as an array of lightweight network proxies that are deployed alongside application code, without the application needing to be aware.
+
 ### Traditional Service to Service Communications
 
 ![](https://philcalcado.com/img/service-mesh/4.png)
@@ -21,8 +23,12 @@ The next logical step would be highly desirable to extract the features required
 into an underlying platform. Built a platform that implements the common patterns such as service discovery, circuit breakers
 required by massively distributed services.
 
-Unfortunately, changing the networking stack to add this layer isn’t a feasible task. The solution found by many practitioners
-was to implement it as a set of proxies. The idea here is that a service won’t connect directly to its downstream dependencies,
-but instead all of the traffic will go through a small piece of software that transparently adds the desired features.
 
+Unfortunately, changing the networking stack to add this layer isn’t a feasible task. The solution found by many practitioners
+was to implement it as a set of proxies. The idea here is that a service won’t connect directly to its downstream dependencies,but instead all of the traffic will go through a small piece of software that transparently adds the desired features.
+
+E.g. Netflix OSS, Prana, Synapse and Nerve
+
+
+We  have recently seen a new wave of proxies that are flexible enough to adapt to different infrastructure components and preferences. The first widely known system on this space was Linkerd, created by Buoyant based on their engineers’ prior work on Twitter’s microservices platform. Soon enough, the engineering team at Lyft announced Envoy which follows a similar principle.
 ![](https://philcalcado.com/img/service-mesh/6-a.png)
