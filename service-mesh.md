@@ -41,5 +41,6 @@ Finally, a service mesh, works exactlt as proxies that manage
 ![](https://philcalcado.com/img/service-mesh/6-b.png)
 
 A bird's eye view of ServiceMesh
+
 ![](https://philcalcado.com/img/service-mesh/mesh3.png)
 
