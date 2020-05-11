@@ -43,3 +43,7 @@ A bird's eye view of ServiceMesh
 
 ![](https://philcalcado.com/img/service-mesh/mesh3.png)
 
+### References
+
+1. [Learn Istio](https://github.com/askmeegs/learn-istio)
+
