@@ -21,4 +21,6 @@ In the diagram above, it is possible to have PID 1 in memory, disk i/o, and cpu 
 with each other.
 
 ## Resources
-[A Linux sysadmin's introduction to cgroups](https://www.redhat.com/sysadmin/cgroups-part-one)
+1. [A Linux sysadmin's introduction to cgroups](https://www.redhat.com/sysadmin/cgroups-part-one)
+2. [Cgroup Internals](https://terenceli.github.io/%E6%8A%80%E6%9C%AF/2020/01/05/cgroup-internlas)
+3. [Understanding cgroup APIs](https://lwn.net/Articles/679786/)
