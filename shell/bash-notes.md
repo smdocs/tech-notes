@@ -16,3 +16,12 @@ In my example scenario, there are files in subdirectories that also need to be c
 ```bash
   find ./ -type f | xargs sed -i 's/user_/admin_/g'
 ```
+
+### How to check the Network interface details;
+
+1. <b>ethtool command</b>
+  -- The ethtool command is used to query or control network driver and hardware settings.
+  ```# sudo ethtool eth0 ```
+  
+ 2. Check all available interfaces
+ ```ip a |awk '/state UP/{print $2}'```
