@@ -95,6 +95,9 @@ Here's how it works
 * Your girlfriend's father comes to visit you. You want to impress him by opening a bunch of text files, each in it's own window in vim (and show him that you're very smart and tech savvy)
 - You write `vim -o f1 f2 f3 f4` to open the specified files with windows split horizontally. use `vim -O f1 f2 f3` to split them vertically. If you have lots of files and you dont want a hundred narrow windows use `vim -o5 *.txt` to open a max of 5 windows (horizontally stacked). 
 - You could instead open them in tabs by using the same syntax `vim -p f1 f2` or `vim -p5 *.txt`
+- ```gt Next tab```
+- ```gT previous tab  ```
+  
 
 
 
