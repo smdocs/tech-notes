@@ -45,5 +45,19 @@ This code does not compile! - You’ll get an error like this because Rust preve
 
 In addition, there’s a design choice that’s implied by this: Rust will never automatically create “deep” copies of your data. Therefore, any automatic copying can be assumed to be inexpensive in terms of runtime performance
 
+For primitive types such as integers whose value is entirely stores in the stack, Rust simply copies the value. n other words, there’s no difference between deep and shallow copying here, so calling clone wouldn’t do anything different from the usual shallow copying, and we can leave it out.
+
+Rust won’t let us annotate a type with Copy if the type, or any of its parts, has implemented the Drop trait. If the type needs something special to happen when the value goes out of scope and we add the Copy annotation to that type, we’ll get a compile-time error. 
+
+So, what types implement the Copy trait? You can check the documentation for the given type to be sure, but as a general rule, any group of simple scalar values can implement Copy, and nothing that requires allocation or is some form of resource can implement Copy. Here are some of the types that implement Copy:
+
+```
+    All the integer types, such as u32.
+    The Boolean type, bool, with values true and false.
+    All the floating-point types, such as f64.
+    The character type, char.
+    Tuples, if they only contain types that also implement Copy. For example, (i32, i32) implements Copy, but (i32, String) does not.
+```
+
 ## References
 1. [Rust Programming Language Book](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html)
